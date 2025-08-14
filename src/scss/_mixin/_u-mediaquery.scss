@@ -10,7 +10,7 @@
   }
 }
 
-@mixin u-mqMaxMin($maxW: $windowSP, $minW: $contentCenter) {
+@mixin u-mqMaxMin($maxW: $windowPC, $minW: $contentCenter) {
   @media screen and (max-width: $maxW) and (min-width: $minW) {
     @content;
   }

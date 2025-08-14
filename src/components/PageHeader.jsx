@@ -4,7 +4,7 @@ const PageHeader = (props) => {
       <hgroup className="common__pageHdrContent">
         <h1 className="common__pageHdrTtl">
           <svg>
-            <text x="50%">{ props.title }</text>
+            <text x="0%">{ props.title }</text>
           </svg>
         </h1>
         <p className="common__pageHdrSubTtl">{ props.subtitle }</p>

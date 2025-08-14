@@ -191,7 +191,7 @@ main
 
   &__pageHdrTtl {
     height: 4rem;
-    margin: 0 0 2rem -15.3rem;
+    margin: 0 0 2rem;
 
     svg {
       display: block;
@@ -199,7 +199,7 @@ main
       stroke-linejoin: round;
       height: 0.8rem;
       overflow: visible;
-      width: fit-content;
+      width: 100%;
       margin-right: auto;
     }
 
