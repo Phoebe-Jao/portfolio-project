@@ -1,0 +1,249 @@
+/*====================================================================
+COMMON LAYOUT
+====================================================================*/
+*,
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  @include u-mqMaxMin($minW: $windowSP, $maxW: 1320px) {
+    font-size: calc(10vw / 13.20);
+  }
+
+  // SP
+  @include u-mqMax($maxW: $windowSP) {
+    font-size: calc(10vw / 3.75);
+  }
+}
+
+body {
+  font-family: $Rubik;
+  background-color: $black;
+}
+
+section {
+  background-color: $white;
+  border-radius: 8px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+/*-----------------------------------------------
+PC/SP
+------------------------------------------------*/
+// PC
+.u-pcDb {
+  display: block;
+}
+.u-pcDib {
+  display: inline-block;
+}
+.u-pcDin {
+  display: inline;
+}
+.u-pcDf {
+  display: flex;
+}
+.u-pcDt {
+  display: table;
+}
+.u-pcDtc {
+  display: table-cell;
+}
+
+.u-spDb,
+.u-spDib,
+.u-spDin,
+.u-spDf,
+.u-spDt,
+.u-spDtc {
+  display: none;
+}
+
+.u-txtWhite {
+  color: $white !important;
+}
+
+.u-txtBold {
+  font-weight: 700 !important;
+}
+
+.u-txtTight {
+  letter-spacing: 0 !important;
+}
+
+.u-brdrWhite {
+  border: 1px solid $white !important;
+}
+
+.u-ml0 {
+  margin-left: 0 !important;
+}
+
+.u-txtIndent0 {
+  text-indent: 0 !important;
+}
+
+// SP
+@include u-mqMax($maxW: $windowSP) {
+  .u-pcDb,
+  .u-pcDib,
+  .u-pcDin,
+  .u-pcDf,
+  .u-pcDt,
+  .u-pcDtc {
+    display: none;
+  }
+
+  .u-spDb {
+    display: block;
+  }
+  .u-spDib {
+    display: inline-block;
+  }
+  .u-spDin {
+    display: inline;
+  }
+  .u-spDf {
+    display: flex;
+  }
+  .u-spDt {
+    display: table;
+  }
+  .u-spDtc {
+    display: table-cell;
+  }
+
+  .u-spMw100 {
+    max-width: 100% !important;
+  }
+
+  .u-spMh100 {
+    max-height: 100% !important;
+  }
+}
+
+/*-----------------------------------------------
+main
+------------------------------------------------*/
+.siteContent {
+  min-height: calc(100vh - #{$headerHeightPC + $headerHeightPC});
+  padding-top: 7%;
+  overflow: hidden;
+
+  @include u-mqMax {
+    padding-top: 12%;
+  }
+}
+
+.js-pageTrs {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: $black;
+}
+
+.u-bdrTrs {
+  border-color: transparent !important;
+}
+
+.common {
+  &__pageHdr {
+    position: relative;
+    padding: 16rem 5vw 6rem;
+    overflow: hidden;
+    border-bottom: 3px solid $black;
+    margin-bottom: 10rem;
+  }
+
+  &__pageHdrTtl {
+    height: 4rem;
+    margin: 0 0 2rem -15.3rem;
+
+    svg {
+      display: block;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      height: 0.8rem;
+      overflow: visible;
+      width: fit-content;
+      margin-right: auto;
+    }
+
+    text {
+      font-family: $Rubik;
+      font-size: 6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      fill: $white;
+      stroke: $black;
+      stroke-width: 2;
+      text-anchor: start;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      dominant-baseline: hanging;
+    }
+  }
+
+  &__pageHdrSubTtl {
+    font-size: 1.55rem;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    line-height: normal;
+    background-color: $black;
+    @include u-flex($jc: center, $ai: center);
+    height: 5.4rem;
+    width: 100%;
+    max-width: 18rem;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 48px;
+    @include u-trs($duration: 0.4s);
+
+    &:hover {
+      color: $black;
+      background-color: $white;
+      border: 2px solid $black;
+    }
+  }
+}
