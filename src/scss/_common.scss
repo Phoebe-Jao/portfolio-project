@@ -164,7 +164,7 @@ main
   overflow: hidden;
 
   @include u-mqMax {
-    padding-top: 12%;
+    padding-top: 23%;
   }
 }
 
@@ -187,6 +187,11 @@ main
     overflow: hidden;
     border-bottom: 3px solid $black;
     margin-bottom: 10rem;
+
+    @include u-mqMax {
+      padding: 10rem 5vw 3rem;
+      margin-bottom: 4.5rem;
+    }
   }
 
   &__pageHdrTtl {
@@ -220,12 +225,14 @@ main
 
   &__pageHdrSubTtl {
     font-size: 1.55rem;
+    font-family: $Rubik;
     font-weight: 400;
     letter-spacing: 0.07em;
   }
 
   &__btn {
     font-size: 1.4rem;
+    font-family: $Rubik;
     font-weight: 700;
     color: $white;
     text-transform: uppercase;
@@ -244,6 +251,89 @@ main
       color: $black;
       background-color: $white;
       border: 2px solid $black;
+    }
+  }
+
+  &__timeline {
+    @include u-flex($ai: flex-start, $fd: column);
+  }
+
+  &__timelineItem {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  &__timelineBullet {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #3498db;
+    border-radius: 50%;
+
+    @include u-mqMax {
+      top: 0.3rem;
+    }
+  }
+
+  &__timelineLine {
+    width: 4px;
+    height: 100%;
+    background: #3498db;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    transform: scaleY(1);
+
+    @include u-mqMax {
+      top: 0.3rem;
+    }
+  }
+
+  &__timelineTtl {
+    font-size: 2rem;
+    font-family: $Rubik;
+    color: $black;
+    margin: 0;
+
+    @include u-mqMax {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__timelineSubTtl {
+    font-size: 1.6rem;
+    font-family: $Rubik;
+    color: $black;
+    margin: 0.3rem 0;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__timelineTime {
+    font-size: 1.4rem;
+    font-family: $Rubik;
+    color: $gray;
+    display: block;
+
+    @include u-mqMax {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__timelineTxt {
+    font-size: 1.6rem;
+    font-family: $Rubik;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: $black;
+    padding: 1rem 0 2.5rem;
+
+    @include u-mqMax {
+      font-size: 1.4rem;
     }
   }
 }

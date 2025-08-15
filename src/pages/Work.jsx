@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../components/block/PageHeader";
 
 const Work = () => {
   return (

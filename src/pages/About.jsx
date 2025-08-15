@@ -2,10 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
-import PageHeader from "../components/PageHeader";
+import PageHeader from "../components/block/PageHeader";
+import Timeline from "../components/block/Timeline";
 import img from '/images/about/about_img.png';
 import linkedin from '/images/about/about_linkedin.png';
 import github from '/images/about/about_github.png';
+import experienceData from "../data/experienceData";
+import educationData from "../data/educationData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,21 +75,23 @@ const About = () => {
                   </a>
                 </div>
               </div>
-              <div className="aboutSec__cont fade-up">
+              <div className="aboutSec__cont">
                 <h3 className="aboutSec__ttl">
                   <svg>
                     <text x="0%">Experience</text>
                   </svg>
                 </h3>
+                <Timeline items={experienceData} />
               </div>
-              <div className="aboutSec__cont fade-up">
+              <div className="aboutSec__cont">
                 <h3 className="aboutSec__ttl">
                   <svg>
                     <text x="0%">Education</text>
                   </svg>
                 </h3>
+                <Timeline items={educationData} />
               </div>
-              <div className="aboutSec__cont u-bdrTrs fade-up">
+              <div className="aboutSec__cont u-bdrTrs">
                 <h3 className="aboutSec__ttl">
                   <svg>
                     <text x="0%">CV</text>
