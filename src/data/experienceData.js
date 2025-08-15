@@ -16,7 +16,7 @@ const experienceData = [
     subtitle: "DEF Inc.",
     period: "2022",
     description: "Assisted in developing landing pages and optimized performance."
-  }
+  },
 ];
 
 export default experienceData;

@@ -60,6 +60,10 @@ a {
   }
 }
 
+figure {
+  margin: 0;
+}
+
 /*-----------------------------------------------
 PC/SP
 ------------------------------------------------*/
@@ -189,7 +193,7 @@ main
     margin-bottom: 10rem;
 
     @include u-mqMax {
-      padding: 10rem 5vw 3rem;
+      padding: 7rem 5vw 3rem;
       margin-bottom: 4.5rem;
     }
   }

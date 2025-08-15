@@ -6,6 +6,8 @@ import Timeline from "../components/block/Timeline";
 import img from '/images/about/about_img.png';
 import linkedin from '/images/about/about_linkedin.png';
 import github from '/images/about/about_github.png';
+import download from '/images/about/about_download.png';
+import view from '/images/about/about_view.png';
 import experienceData from "../data/experienceData";
 import educationData from "../data/educationData";
 
@@ -90,6 +92,16 @@ const About = () => {
                   <text x="0%">CV</text>
                 </svg>
               </h3>
+              <div className="aboutSec__btnCont">
+                <a href="#" target="_blank" className="aboutSec__btn">
+                  <img src={download} alt="download" className="aboutSec__btnImg" />
+                  Download
+                </a>
+                <a href="#" target="_blank" className="aboutSec__btn">
+                  <img src={view} alt="download" className="aboutSec__btnImg" />
+                  View
+                </a>
+              </div>
             </div>
           </div>
         </div>

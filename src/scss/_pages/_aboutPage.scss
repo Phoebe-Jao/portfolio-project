@@ -14,7 +14,7 @@
     &__inner {
       max-width: 80.6%;
       margin: 0 auto;
-      padding: 8.5rem 7rem 8rem;
+      padding: 8.5rem 7rem 3rem;
       border: 3px solid $black;
       border-radius: 20px;
       display: grid;
@@ -66,7 +66,7 @@
       border-bottom: 3px solid $black;
 
       @include u-mqMax {
-        padding-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
       }
     }
 
@@ -135,9 +135,21 @@
       }
     }
 
+    &__btnCont,
     &__socialCont {
       @include u-flex;
       gap: 2rem;
+    }
+
+    &__btnCont {
+      padding: 1.5rem 0;
+
+      @include u-mqMax {
+        padding: 0.5rem 0;
+      }
+    }
+
+    &__socialCont {
       padding: 4rem 0 0 0.5rem;
 
       @include u-mqMax {
@@ -145,6 +157,7 @@
       }
     }
 
+    &__btn,
     &__socialBtn {
       max-width: 5.5rem;
       display: block;
@@ -152,6 +165,13 @@
       @include u-hoverOp;
     }
 
+    &__btn {
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    &__btnImg,
     &__socialBtnImg {
       width: 100%;
       height: 100%;
